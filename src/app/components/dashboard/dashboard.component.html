@@ -1,0 +1,65 @@
+
+
+  <div class="menu">
+    <h3 class="title">Entreprise</h3>
+
+<div class="menu-list">
+    <div class="menu-item">
+        <img src="..\..\..\assets\dashboard.png" alt="">
+        <a >Dashboard</a>
+    </div>
+    <div class="menu-item">
+        <img src="..\..\..\assets\user.png" alt="">
+        <a >Profile</a>
+    </div>
+    <div class="menu-item">
+        <img src="..\..\..\assets\settings.png" alt="">
+        <a >Settings</a>
+    </div>
+    <div class="menu-item">
+        <img src="..\..\..\assets\turn-off.png" alt="">
+        <a >Log Out</a>
+    </div>
+
+</div>
+</div>
+
+<section class="main-section" >
+     <nav class="navbar" >
+        <div class="container-fluid">
+            <div class="account">
+                <img width="25px" src="../../../assets/admin.png" alt="">
+                <span class="name">userName</span>
+        </div>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline" type="submit">Search</button>
+          </form> 
+        </div>
+      </nav>
+ 
+
+      <div class="form-div">
+        <form [formGroup]="dashboardForm">
+        <div id="form-div">
+            <p class="label">Send Message</p>
+            <textarea  placeholder="" formControlName="message"></textarea>
+        </div>
+        <div id="form-div">
+            <p>Select Category</p>
+            <select id="dropdown" formControlName="category">
+              <option value="all-categories">All Categiers</option>
+              <option value="marketing">Marketing</option>
+              <option value="hr">Humane Resources</option>
+              <option value="developers">Developers</option>
+          </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" (click)="onSend()">Send</button>
+          </form>
+      </div>
+
+
+</section>
+  
+  
+ 
